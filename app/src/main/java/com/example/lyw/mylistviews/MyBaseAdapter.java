@@ -46,23 +46,17 @@ abstract class MyBaseAdapter extends BaseAdapter {
 
 
 
-
-
-
-
-
     @Override
     public View getView(int i, View convertView, ViewGroup viewGroup) {
-        BaseHolder holder;
+
         if (convertView == null) {
             // 1. 加载布局文件
             // 2. 初始化控件 findViewById
             // 3. 打一个标记tag
 
-                holder = getHolder();// 子类返回具体对象
 
         } else {
-            holder = (BaseHolder) convertView.getTag();
+
         }
         // 4. 根据数据来刷新界面
         // 加载更多布局
@@ -71,6 +65,5 @@ abstract class MyBaseAdapter extends BaseAdapter {
         return null;
     }
 
-    // 返回当前页面的holder对象, 必须子类实现
-    public abstract BaseHolder getHolder();
+
 }
